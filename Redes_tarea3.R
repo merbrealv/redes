@@ -106,7 +106,7 @@ summary(lm.r)
 ## con un número de nodos y aristas dado. 
 tfs.network
 
-random.graph <- erdos.renyi.game(n=21, p.or.m=115, type="gnm", directed=TRUE, loops=TRUE)
+random.graph <- erdos.renyi.game(n=10, p.or.m=28, type="gnm", directed=TRUE, loops=TRUE)
 plot.igraph(x = random.graph,vertex.size=8,edge.arrow.size=0.5,vertex.label="",vertex.color="blue")
 
 ## Empezamos viendo si es un motivo de red la autorregulación.
@@ -188,16 +188,16 @@ occurrency.subgraph.three.nodes[3]
 
 mean(motifs.3.random.graph[,3])
 sd(motifs.3.random.graph[,3])
-sum(motifs.3.random.graph[,3] >71)/1000
+sum(motifs.3.random.graph[,3] >8)/1000
 ##No significativo
 
 ## subgrafo 14
 plot(graph.isocreate(size=3, number=13))
-occurrency.subgraph.three.nodes[14]
+occurrency.subgraph.three.nodes[13]
 
-mean(motifs.3.random.graph[,14])
-sd(motifs.3.random.graph[,14])
-sum(motifs.3.random.graph[,14] > 30)/1000
+mean(motifs.3.random.graph[,13])
+sd(motifs.3.random.graph[,13])
+sum(motifs.3.random.graph[,13] > 0)/1000
 ##No significativo
 
 feedback.loop.with.output <- graph.isocreate(size=3, number=13)
